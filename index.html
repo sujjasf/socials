@@ -105,6 +105,73 @@
         animation: bounce 0.5s infinite alternate;
       }
 
+      .memes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .memes img {
+        width: 120px;
+        height: auto;
+        border: 3px solid #ff00ff;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        animation: float 3s ease-in-out infinite alternate;
+        cursor: pointer;
+      }
+
+      /* Floating animation */
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-5px) rotate(-3deg);
+        }
+        50% {
+          transform: translateY(5px) rotate(2deg);
+        }
+        75% {
+          transform: translateY(-5px) rotate(-2deg);
+        }
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+      }
+
+      /* Hover effects: funky chaos */
+      .memes img:hover {
+        transform: scale(1.5) rotate(20deg);
+        border-color: #00ffff;
+        box-shadow:
+          0 0 20px #ff0000,
+          0 0 30px #00ff00,
+          0 0 40px #0000ff,
+          0 0 50px #ff00ff;
+        animation: hoverPulse 0.5s infinite alternate;
+        z-index: 10;
+        filter: hue-rotate(90deg) brightness(1.5) saturate(2);
+      }
+
+      /* Pulse + color effect on hover */
+      @keyframes hoverPulse {
+        0% {
+          transform: scale(1.5) rotate(15deg);
+          filter: hue-rotate(0deg) brightness(1.5) saturate(2);
+        }
+        50% {
+          transform: scale(1.6) rotate(25deg);
+          filter: hue-rotate(180deg) brightness(1.8) saturate(2.5);
+        }
+        100% {
+          transform: scale(1.5) rotate(20deg);
+          filter: hue-rotate(360deg) brightness(1.5) saturate(2);
+        }
+      }
+
       @keyframes bounce {
         0% {
           transform: translateY(0);
@@ -125,14 +192,15 @@
     <h1>Connect with Sujjal 😎</h1>
 
     <!-- Fun YouTube Video at Top -->
-    <iframe class="youtube" 
-        src="https://www.youtube.com/embed/mANvg9R1xeI?autoplay=1&loop=1&playlist=mANvg9R1xeI" 
-        title="YouTube video" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-</iframe>
-
+    <iframe
+      class="youtube"
+      src="https://www.youtube.com/embed/mANvg9R1xeI?autoplay=1&loop=1&playlist=mANvg9R1xeI"
+      title="YouTube video"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    >
+    </iframe>
 
     <a href="https://www.facebook.com/sujjasf" target="_blank">
       Facebook
@@ -169,5 +237,61 @@
         alt="LinkedIn Meme"
       />
     </a>
+
+    <h2>Here are memes lol 😭✌️</h2>
+    <div class="memes">
+      <img
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXcybHIxaXhyb2x3Z3J4Y29rZmpqdDRsM3luanBtZHE2cHF5bWxoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/li7H27JwLTBxeeXgJ8/giphy.gif"
+        alt="Meme 1"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGJ0MWFjOHlkbWVwbDIxNTZtemJvcm1scWxqZmUydnZ5ZWFoaXllcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FIxqsozdqLDHftboUt/giphy.gif"
+        alt="Meme 2"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JxOHh6Nng2NGQ3MWhvYTRveDVqNG0wdTlxMTJhZjc2Y2p3bmI2aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/fT3OUK1DTJAI76ZF0i/giphy.gif"
+        alt="Meme 3"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3MzY3J4cnM3aDVyeWJwazBna3NtaGszb3p5czZraTBndzI1bzljdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/U335adiNvcKJGdACMB/giphy.gif"
+        alt="Meme 4"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYng3YXc4aW85OXE5aGZ1dGNiZm1td2thaGRhNDFicWlpcHBreXZvbCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NAivbJDbjN9sgkLzzE/giphy.gif"
+        alt="Meme 5"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjE1d21lcDJpNjIzdXZ5Nzc3OG4xdmV2aWo5ODVvdm92MHltM3pnayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/J7JiKpKO4nuvscqXBn/giphy.gif"
+        alt="Meme 6"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGk0NXpjMHN3dXg4bW9zMHd0ZXhyYm5pOGhnZGlpYzI3cTUzY3NmcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FYUWPOwJ0v0WwxYtqq/giphy.gif"
+        alt="Meme 7"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGk0NXpjMHN3dXg4bW9zMHd0ZXhyYm5pOGhnZGlpYzI3cTUzY3NmcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/O56Pqrb8AnXsrcHmzX/giphy.gif"
+        alt="Meme 8"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRjZ2llNGMwZXoycW9mcnkzcmluODhodGZmcjJkNW1mNTd6MmJjdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hCt8CNy1joUChsUA9K/giphy.gif"
+        alt="Meme 9"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDVnZHl1MTRzbmVoOGNrd2ZsYm96bXp4dnZsNTVmbGw0ZWs5ZzN5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/XFIukLoM89PaAD325q/giphy.gif"
+        alt="Meme 10"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmRjZ2llNGMwZXoycW9mcnkzcmluODhodGZmcjJkNW1mNTd6MmJjdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/wKJSRY2OgYx2m6R4oA/giphy.gif"
+        alt="Meme 11"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGJvYjUzeWc1b2ZjYTZhYzgzbDVlZ2w3bDRtejMyeHc3YXpxMmMxdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7sI6GmJUj1DRYAGwuH/giphy.gif"
+        alt="Meme 12"
+      />
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHJvYTQ3YmEzN3Rza3VmNjAwZGFhNHB1a2g1M3p2Y3BzNjc5Zm02aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/CpyBnCrWqoxhpSdHfK/giphy.gif"
+        alt="Meme 13"
+      />
+    </div>
   </body>
 </html>
