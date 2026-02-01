@@ -1,20 +1,173 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Social Links</title>
-  <style>
-    body { font-family: Arial; text-align:center; margin-top:50px; }
-    a { display:block; margin:10px; text-decoration:none; font-size:20px; }
-  </style>
-</head>
-<body>
-  <h1>Connect with me</h1>
-  <a href="https://www.facebook.com/sujjasf" target="_blank">Facebook</a>
-  <a href="https://www.instagram.com/sujjasf" target="_blank">Instagram</a>
-  <a href="https://twitter.com/sujjalkhadka" target="_blank">Twitter</a>
-  <a href="https://linkedin.com/in/sujjalkhadka" target="_blank">LinkedIn</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect with Sujjal 😎</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+      body {
+        font-family: "Press Start 2P", cursive;
+        text-align: center;
+        margin: 20px;
+        background: #1a1a1a;
+        color: #fff;
+        background-image: url("https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      h1 {
+        font-size: 2em;
+        color: #ff00ff;
+        text-shadow: 2px 2px #00ffff;
+        margin-bottom: 20px;
+        animation: rainbow 3s infinite alternate;
+      }
+
+      @keyframes rainbow {
+        0% {
+          color: #ff0000;
+        }
+        25% {
+          color: #ff7f00;
+        }
+        50% {
+          color: #ffff00;
+        }
+        75% {
+          color: #00ff00;
+        }
+        100% {
+          color: #0000ff;
+        }
+      }
+
+      .youtube {
+        width: 560px;
+        max-width: 90%;
+        height: 315px;
+        border: 5px solid #ff00ff;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 20px #00ffff;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .youtube:hover {
+        transform: rotate(-3deg) scale(1.05);
+        box-shadow:
+          0 0 30px #ff00ff,
+          0 0 50px #00ffff;
+      }
+
+      a {
+        display: block;
+        margin: 20px auto;
+        text-decoration: none;
+        font-size: 1.2em;
+        width: 300px;
+        padding: 15px;
+        border-radius: 12px;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      a:hover {
+        transform: rotate(-5deg) scale(1.1);
+        box-shadow:
+          0 0 20px #fff,
+          0 0 40px #ff00ff,
+          0 0 60px #00ffff;
+      }
+
+      a::after {
+        content: "🔥";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 1.5em;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      a:hover::after {
+        opacity: 1;
+        animation: bounce 0.5s infinite alternate;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .gif {
+        width: 80px;
+        display: block;
+        margin: 10px auto -10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connect with Sujjal 😎</h1>
+
+    <!-- Fun YouTube Video at Top -->
+    <iframe class="youtube" 
+        src="https://www.youtube.com/embed/mANvg9R1xeI?autoplay=1&loop=1&playlist=mANvg9R1xeI" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+</iframe>
+
+
+    <a href="https://www.facebook.com/sujjasf" target="_blank">
+      Facebook
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/3o7aCSPqXE5C6T8tBC/giphy.gif"
+        alt="Facebook Meme"
+      />
+    </a>
+
+    <a href="https://www.instagram.com/sujjasf" target="_blank">
+      Instagram
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/l4JyOCNEfXvVYEqB2/giphy.gif"
+        alt="Instagram Meme"
+      />
+    </a>
+
+    <a href="https://twitter.com/sujjalkhadka" target="_blank">
+      Twitter
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif"
+        alt="Twitter Meme"
+      />
+    </a>
+
+    <a href="https://linkedin.com/in/sujjalkhadka" target="_blank">
+      LinkedIn
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif"
+        alt="LinkedIn Meme"
+      />
+    </a>
+  </body>
 </html>
